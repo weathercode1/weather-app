@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body></body>
+  <!-- Header -->
+  <header>
+    <h1 id="location">DARTFORD</h1>
+    <p id="date">Nov 18, 2024</p>
+  </header>
+
+  <!-- Weather Info -->
+  <div id="weather-info">
+    <div id="temperature-container">
+     
+      <span id="temperature-value">74</span>
+      <span id="temperature-unit">°C</span>
+      <p id="weather-condition">Clear sky</p>
+    </div>
+    <div id="extra-info">
+      <div>
+          <p>Humidity</p>
+          <p id="humidity-value">74 <span id="humidity-unit">%</span></p>
+      </div>
+      <div>
+          <p>Air Pressure</p>
+          <p id="air-pressure-value">1013 <span id="air-pressure-unit">hPa</span></p>
+      </div>
+      <div>
+          <p>Chance of Rain</p>
+          <p id="chance-of-rain-value">N/A <span id="rain-unit">%</span></p>
+      </div>
+      <div>
+          <p>Sunlight brightness</p>
+          <p id="sunlight-value">N/A <span id="sunlight-unit">%</span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Temperature Trends -->
+  <section id="temperature-trends">
+    <canvas id="temp-chart" width="400" height="200"></canvas>
+  </section>
+
+  <!-- Forecast Section -->
+  <div id="forecast">
+    <h2>3-Day Forecast</h2>
+    <div id="forecast-cards">
+      <!-- Cards will be dynamically generated -->
+    </div>
+  </div>
+
+  <!-- Settings Button -->
+  <button id="settings-btn-bottom">⚙️</button>
+
+  <!-- Settings Modal -->
+  <div id="settings-modal" class="hidden">
+    <div id="settings-content">
+        <h3>Settings</h3>
+        <label for="unit-select">Temperature Unit:</label>
+        <select id="unit-select">
+            <option value="C">Celsius (°C)</option>
+            <option value="F" selected>Fahrenheit (°F)</option>
+        </select>
+        <button id="save-settings">Save</button>
+    </div>
+  </div>
+
+  <!-- Refresh Button -->
+  <button id="refresh-btn">🔄</button>
+  <script src="script.js" defer></script>
+</body>
+</html>
