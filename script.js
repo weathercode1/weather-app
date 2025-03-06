@@ -41,8 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const temperature = parseFloat(latestData.field1).toFixed(2);
             const humidity = parseFloat(latestData.field2).toFixed(2);
             const airPressure = parseFloat(latestData.field4).toFixed(2);
-            const chanceOfRain = latestData.field3 ? parseFloat(latestData.field5).toFixed(2) : "N/A";
-            const sunlight = latestData.field4 ? parseFloat(latestData.field6).toFixed(2) : "N/A";
+            const chanceOfRain = latestData.field5 ? parseFloat(latestData.field5).toFixed(2) : "N/A";
+            const sunlight = latestData.field6 ? parseFloat(latestData.field6).toFixed(2) : "N/A";
     
             // Update UI with fetched data
             updateTemperatureDisplay(temperature);
