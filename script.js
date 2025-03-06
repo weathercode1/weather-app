@@ -40,14 +40,14 @@ document.addEventListener("DOMContentLoaded", () => {
             // Readings from ThingSpeak fields
             const temperature = parseFloat(latestData.field1).toFixed(2);
             const humidity = parseFloat(latestData.field2).toFixed(2);
-            const airPressure = parseFloat(latestData.field1).toFixed(2);
-            const chanceOfRain = latestData.field3 ? parseFloat(latestData.field3).toFixed(2) : "N/A";
-            const sunlight = latestData.field4 ? parseFloat(latestData.field4).toFixed(2) : "N/A";
+            const airPressure = parseFloat(latestData.field4).toFixed(2);
+            const chanceOfRain = latestData.field3 ? parseFloat(latestData.field5).toFixed(2) : "N/A";
+            const sunlight = latestData.field4 ? parseFloat(latestData.field6).toFixed(2) : "N/A";
     
             // Update UI with fetched data
             updateTemperatureDisplay(temperature);
-            humidityValue.textContent = `${humidity} %`;
-            airPressureValue.textContent = `${airPressure} hPa`;
+            humidityValue.textContent = `${humidity} Pa`;
+            airPressureValue.textContent = `${airPressure} %`;
             document.getElementById("chance-of-rain-value").textContent = `${chanceOfRain} %`;
             document.getElementById("sunlight-value").textContent = `${sunlight} %`;
         } catch (error) {
