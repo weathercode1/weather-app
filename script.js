@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const latestData = data.feeds[0];
     
             // Readings from ThingSpeak fields
-            const temperature = parseFloat(latestData.field1).toFixed(2);
+            const temperature = parseFloat(latestData.field3).toFixed(2);
             const humidity = parseFloat(latestData.field2).toFixed(2);
             const airPressure = parseFloat(latestData.field4).toFixed(2);
             const chanceOfRain = latestData.field5 ? parseFloat(latestData.field5).toFixed(2) : "N/A";
